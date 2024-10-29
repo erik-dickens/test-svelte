@@ -41,9 +41,28 @@
 
 <style>
   @import '../blog.css';
+  .back-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #3498db;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  .back-link svg {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+  }
 </style>
 
 <main>
+  <a href="/blog" class="back-link">
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M15 6L9 12L15 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    Back to Blog
+  </a>
   {#if post}
     <h1>{post.title}</h1>
     {#if isEditing}
